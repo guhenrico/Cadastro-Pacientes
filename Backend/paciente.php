@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Paciente</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link href = "frontend/style.css" rel = "stylesheet"
 </head>
     <body>
         <h3> Cadastro de Pacientes</h3><br>
