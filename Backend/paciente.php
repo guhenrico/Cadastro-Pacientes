@@ -9,15 +9,28 @@
 
 </head>
     <body>
-        <h3> Cadastro de Pacientes</h3><br>
-        <form name = "Cadastro" action = "cadastro.php" method = "POST">
-        <label> ID: </label>
-        <input type = "text" name = "ID" size = "50" ></br>
-        <label> Nome : </label>
-        <input type = "text" name = "Nome" size = "46" ></br>
+        <header>
+            <img src="../Frontend/img/logo.jpg" alt=""> 
+            <nav class="topo">   
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Paciente</a></li>
+                    </ul>
+            </nav>
+        </header>
 
-        <input type = "submit" name = "enviar" value = "Cadastrar">
-        </form>
+        <section>
+            <h3> Cadastro de Pacientes</h3><br>
+            <form name = "Cadastro" action = "cadastro.php" method = "POST">
+            <label> ID: </label>
+            <input type = "text" name = "ID" size = "50" ></br>
+            <label> Nome : </label>
+            <input type = "text" name = "Nome" size = "46" ></br>
+
+            <input type = "submit" name = "enviar" value = "Cadastrar">
+            </form>
+        </section>
+        
 
     </body>
 </html>

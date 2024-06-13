@@ -1,3 +1,31 @@
 body{
-    background-color: red;
+    font-family: sans-serif;
+}
+.topo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav img{
+    align-items: left;
+}
+
+.topo a{
+    padding: .75em 1.15em;
+    border: solid 1px;
+    text-decoration: none;
+    background-color: #E9E9E9;
+    color: black;
+    border-radius: 10px;
+}
+
+.topo ul{
+    display: flex;
+    gap: .6rem;
+    list-style-type: none;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
