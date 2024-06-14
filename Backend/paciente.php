@@ -14,7 +14,7 @@
             <nav class="navbar">   
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">Paciente</a></li>
+                    <li><a href="../Frontend/html/cadastrados.html ">Paciente</a></li>
                 </ul>
             </nav>
         </div>
@@ -22,15 +22,19 @@
 
     <div class="container">
         <div class="card">
-        <h3><img src="../Frontend/img/Add Pacientes.png" alt="Ícone"> Cadastro de Paciente</h3>
-        <form name="Cadastro" action="cadastro.php" method="POST">
+            <h3><img src="../Frontend/img/Add Pacientes.png" alt="Ícone"> Cadastro de Paciente</h3>
+            <form name="Cadastro" id="cadastroForm">
                 <label for="ID">ID <span>*</span></label>
                 <input type="text" id="ID" name="ID" required><br><br>
                 <label for="Nome">Nome <span>*</span></label>
                 <input type="text" id="Nome" name="Nome" required><br><br>
-                <input type="submit" name="enviar" value="Cadastrar">
+                <input type="submit" id="submitBtn" name="enviar" value="Cadastrar">
             </form>
         </div>
     </div>
+
+    <script src="../Frontend/js/script.js"></script>
+    <script src="../Frontend/js/exibir.js"></script>
+
 </body>
 </html>
