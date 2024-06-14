@@ -20,19 +20,17 @@
         </div>
     </header>
 
-    <section>
-        <h3>Cadastro de Pacientes</h3>
+    <div class="container">
+        <div class="card">
+        <h3><img src="../Frontend/img/Add Pacientes.png" alt="Ícone"> Cadastro de Paciente</h3>
         <form name="Cadastro" action="cadastro.php" method="POST">
-            <div class="form-group">
-                <label for="ID">ID:</label>
-                <input type="text" id="ID" name="ID" size="50" required>
-            </div>
-            <div class="form-group">
-                <label for="Nome">Nome:</label>
-                <input type="text" id="Nome" name="Nome" size="46" required>
-            </div>
-            <input type="submit" name="enviar" value="Cadastrar">
-        </form>
-    </section>
+                <label for="ID">ID <span>*</span></label>
+                <input type="text" id="ID" name="ID" required><br><br>
+                <label for="Nome">Nome <span>*</span></label>
+                <input type="text" id="Nome" name="Nome" required><br><br>
+                <input type="submit" name="enviar" value="Cadastrar">
+            </form>
+        </div>
+    </div>
 </body>
 </html>
