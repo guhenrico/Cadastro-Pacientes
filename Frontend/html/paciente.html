@@ -20,11 +20,22 @@
         </div>
     </header>
 
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar por ID ou Nome">
+        <button id="searchButton">Pesquisar</button>
+    </div>
+
+    <div class="sort-container">
+        <label><input type="checkbox" id="sortByNameAsc"> Nome (A-Z)</label>
+        <label><input type="checkbox" id="sortByNameDesc"> Nome (Z-A)</label>
+        <label><input type="checkbox" id="sortByIdAsc"> ID (Crescente)</label>
+        <label><input type="checkbox" id="sortByIdDesc"> ID (Decrescente)</label>
+    </div>
+
     <div class="Biblioteca"></div>
 
-    
     <script src="https://kit.fontawesome.com/b7c56484a7.js" crossorigin="anonymous"></script>
     <script src="../JS/paciente.js"></script>
-
 </body>
 </html>
+
