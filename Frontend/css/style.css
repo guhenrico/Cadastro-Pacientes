@@ -136,13 +136,15 @@ span {
 
 
 
-.error {
-    border: 2px solid red !important;
+input.error {
+    border-color: red;
 }
 
-.error::placeholder {
+input.error::placeholder {
     color: red;
 }
+
+
 
 .completed {
     text-decoration: line-through;

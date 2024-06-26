@@ -1,9 +1,33 @@
-// Código JS para home.html
 const cadastroForm = document.getElementById('cadastroForm');
 
 if (cadastroForm) {
+    const inputElements = document.querySelectorAll(".ID, .Nome"); // Seleciona ambos os elementos
+
+    const validateInput = (inputElement) => inputElement.value.trim().length > 0;
+
+    const markInvalidFields = (inputElements) => {
+        let allInputsValid = true;
+
+        inputElements.forEach((inputElement) => {
+            const inputIsValid = validateInput(inputElement);
+            if (!inputIsValid) {
+                inputElement.classList.add("error");
+                inputElement.placeholder = "Campo obrigatório";
+                allInputsValid = false;
+            } else {
+                inputElement.classList.remove("error");
+            }
+        });
+
+        return allInputsValid;
+    };
+
     cadastroForm.addEventListener('submit', function(event) {
         event.preventDefault();
+
+        if (!markInvalidFields(inputElements)) {
+            return; // Se algum campo for inválido, não prosseguir com o cadastro
+        }
 
         const ID = document.querySelector('.ID').value;
         const Nome = document.querySelector('.Nome').value;
