@@ -1,7 +1,7 @@
 const cadastroForm = document.getElementById('cadastroForm');
 
 if (cadastroForm) {
-    const inputElements = document.querySelectorAll(".ID, .Nome"); // Seleciona ambos os elementos
+    const inputElements = document.querySelectorAll(".ID, .Nome");
 
     const validateInput = (inputElement) => inputElement.value.trim().length > 0;
 
