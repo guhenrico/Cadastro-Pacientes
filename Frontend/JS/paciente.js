@@ -11,7 +11,7 @@ const refreshTasksUsingLocalStorage = (searchTerm = "") => {
 
     if (!pacientesFromLocalStorage) return;
 
-    tasksContainer.innerHTML = ""; // Limpar o container antes de adicionar os pacientes do localStorage
+    tasksContainer.innerHTML = "";
 
     let filteredPacientes = pacientesFromLocalStorage.filter(paciente => 
         paciente.ID.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -57,19 +57,16 @@ const handleDeleteClick = (patientID) => {
     refreshTasksUsingLocalStorage();
 }
 
-// Adiciona evento ao botão de pesquisa
 searchButton.addEventListener("click", () => {
     const searchTerm = searchInput.value;
     refreshTasksUsingLocalStorage(searchTerm);
 });
 
-// Adiciona evento de input ao campo de pesquisa para atualização em tempo real
 searchInput.addEventListener("input", () => {
     const searchTerm = searchInput.value;
     refreshTasksUsingLocalStorage(searchTerm);
 });
 
-// Adiciona eventos de change aos checkboxes para atualizar a lista quando forem clicados
 sortByNameAsc.addEventListener("change", () => {
     if (sortByNameAsc.checked) {
         sortByNameDesc.checked = false;
@@ -106,10 +103,10 @@ sortByIdDesc.addEventListener("change", () => {
     refreshTasksUsingLocalStorage(searchInput.value);
 });
 
-// Verifica se há pacientes no localStorage ao carregar a página
 if (tasksContainer) {
     refreshTasksUsingLocalStorage();
 }
+
 
 
 

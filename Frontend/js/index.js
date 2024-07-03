@@ -26,7 +26,7 @@ if (cadastroForm) {
         event.preventDefault();
 
         if (!markInvalidFields(inputElements)) {
-            return; // Se algum campo for inválido, não prosseguir com o cadastro
+            return;
         }
 
         const ID = document.querySelector('.ID').value;
@@ -37,16 +37,13 @@ if (cadastroForm) {
             Nome: Nome
         };
 
-        // Obtém os pacientes cadastrados do localStorage
         const pacientes = JSON.parse(localStorage.getItem('pacientes')) || [];
 
-        // Adiciona o novo paciente à lista
         pacientes.push(newPatient);
 
-        // Atualiza o localStorage com a lista atualizada de pacientes
         localStorage.setItem('pacientes', JSON.stringify(pacientes));
 
-        // Redireciona para a página paciente.html após cadastrar
         window.location.href = 'paciente.html';
     });
 }
+
